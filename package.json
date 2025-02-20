@@ -1,0 +1,20 @@
+{
+  "name": "marx-robot",
+  "version": "1.0.0",
+  "description": "Projeto node apenas para que tenhamos o servidor do appium local",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anderson Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "appium": "^2.15.0"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^4.0.1"
+  }
+}
