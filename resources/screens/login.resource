@@ -3,11 +3,13 @@ Documentation    Elementos  e ações na tela de login
 
 Library    AppiumLibrary
 
-*** Variables ***
-${API_IP}    192.168.18.6
-
 *** Keywords ***
 
 Do login
+    [Arguments]    ${API_IP} 
     Input Text       xpath=//*[@resource-id="apiIp"]    ${API_IP}    
     Click Element    xpath=//*[@resource-id="signInButton"]
+
+Validate screen
+    [Arguments]    ${text}
+    Wait Until Page Contains    ${text}    5
