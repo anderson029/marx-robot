@@ -6,21 +6,15 @@ Resource    ../resources/base.robot
 *** Test Cases ***
 Deve ralizar o login
     [Tags]    login
-
-    Open Application    http://localhost:4723
-    ...    automationName=uiautomator2
-    ...    platformName=Android
-    ...    deviceName=Emulator
-    ...    udid=emulator-5554
-    ...    autoGrantPermissions=true
-    ...    app=${EXECDIR}/apps/markx.apk 
-    
+    Start section
     Wait Until Page Contains    Endereço IP da Api    2
-
-    Input Text       xpath=//*[@resource-id="apiIp"]    192.168.18.6  
-    Click Element    xpath=//*[@resource-id="signInButton"]    
-
+    Login    192.168.18.6
     Wait Until Page Contains    Minhas tarefas    5
+    Teardown
 
-    Capture Page Screenshot
-    Close Application
+*** Keywords ***
+Login
+    [Arguments]    ${ip}
+    Input Text       xpath=//*[@resource-id="apiIp"]    ${ip}    
+    Click Element    xpath=//*[@resource-id="signInButton"]
+    
