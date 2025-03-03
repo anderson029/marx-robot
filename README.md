@@ -17,3 +17,9 @@ Levantar Banco de dados na pasta apps/api:
 
 Biblioteca para conectar o robot ao BD mongo DB
 **pip install pymongo**
+
+Visualizar os pacotes instalados no computador
+**pip freeze**
+
+Cria um arquivo txt com as depêndencias
+**pip freeze > requirement.txt**
