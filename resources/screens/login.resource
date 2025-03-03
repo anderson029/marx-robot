@@ -9,7 +9,3 @@ Do login
     [Arguments]    ${API_IP} 
     Input Text       xpath=//*[@resource-id="apiIp"]    ${API_IP}    
     Click Element    xpath=//*[@resource-id="signInButton"]
-
-Validate screen
-    [Arguments]    ${text}
-    Wait Until Page Contains    ${text}    5
